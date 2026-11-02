@@ -1,0 +1,160 @@
+{
+  "version": "7.2.0",
+  "passed": true,
+  "generatedAt": "2026-11-02T04:00:21.801Z",
+  "canonical": "https://ora.mcmv-rs.com.br/",
+  "images": 25,
+  "checks": [
+    {
+      "id": "html-main",
+      "ok": true,
+      "level": "error",
+      "message": "O HTML deve conter um landmark <main> acessível."
+    },
+    {
+      "id": "html-skip-link",
+      "ok": true,
+      "level": "warning",
+      "message": "Link para pular ao conteúdo principal ausente."
+    },
+    {
+      "id": "page-language",
+      "ok": true,
+      "level": "warning",
+      "message": "Idioma do documento ausente ou inesperado."
+    },
+    {
+      "id": "page-title",
+      "ok": true,
+      "level": "error",
+      "message": "Título HTML ausente."
+    },
+    {
+      "id": "page-description",
+      "ok": true,
+      "level": "warning",
+      "message": "Meta description ausente."
+    },
+    {
+      "id": "page-headings",
+      "ok": true,
+      "level": "warning",
+      "message": "H1 não identificado no HTML exportado; verifique os títulos do hero."
+    },
+    {
+      "id": "canonical-match",
+      "ok": true,
+      "level": "error",
+      "message": "Canonical HTML não corresponde à URL configurada."
+    },
+    {
+      "id": "ai-catalog",
+      "ok": true,
+      "level": "error",
+      "message": "Catálogo de descoberta de agentes inválido ou ausente."
+    },
+    {
+      "id": "llms-files",
+      "ok": true,
+      "level": "error",
+      "message": "Arquivos llms.txt / llms-full.txt ausentes."
+    },
+    {
+      "id": "webmcp-runtime",
+      "ok": true,
+      "level": "error",
+      "message": "Runtime WebMCP não conectado ao HTML."
+    },
+    {
+      "id": "webmcp-form-annotation",
+      "ok": true,
+      "level": "error",
+      "message": "Formulários precisam de anotação declarativa progressiva."
+    },
+    {
+      "id": "public-robots",
+      "ok": true,
+      "level": "error",
+      "message": "robots.txt ausente."
+    },
+    {
+      "id": "public-sitemap",
+      "ok": true,
+      "level": "error",
+      "message": "Sitemap XML inválido ou ausente."
+    },
+    {
+      "id": "sitemap-canonical",
+      "ok": true,
+      "level": "error",
+      "message": "Sitemap não aponta à URL canônica."
+    },
+    {
+      "id": "image-namespace",
+      "ok": true,
+      "level": "error",
+      "message": "Extensão de sitemap de imagens inválida."
+    },
+    {
+      "id": "images-https",
+      "ok": true,
+      "level": "warning",
+      "message": "Imagens com URL HTTP detectadas no sitemap, migre para HTTPS."
+    },
+    {
+      "id": "metadata",
+      "ok": true,
+      "level": "warning",
+      "message": "Preencha SEO title e description."
+    },
+    {
+      "id": "seo-indexing",
+      "ok": true,
+      "level": "warning",
+      "message": "O projeto está marcado como noindex; mecanismos de busca não indexarão a página."
+    },
+    {
+      "id": "hero-image",
+      "ok": true,
+      "level": "warning",
+      "message": "Nenhuma imagem pública indexável detectada."
+    },
+    {
+      "id": "public-url",
+      "ok": true,
+      "level": "warning",
+      "message": "URL canônica HTTPS não configurada."
+    },
+    {
+      "id": "content-sections",
+      "ok": true,
+      "level": "warning",
+      "message": "Projeto sem seção visível."
+    },
+    {
+      "id": "image-alt",
+      "ok": true,
+      "level": "warning",
+      "message": "0 elemento(s) <img> sem atributo alt; revisar acessibilidade e contexto das imagens."
+    },
+    {
+      "id": "external-images",
+      "ok": true,
+      "level": "warning",
+      "message": "Imagens em outros domínios: verifique a propriedade desses hosts no Search Console e libere Googlebot."
+    },
+    {
+      "id": "no-auto-form-submit",
+      "ok": true,
+      "level": "warning",
+      "message": "WebMCP não pode enviar leads automaticamente."
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "Auditoria estática dos arquivos gerados: não substitui Lighthouse, validação WebMCP em navegador compatível ou teste publicado por HTTPS.",
+    "llms.txt é informativo; não garante posicionamento ou indexação por ferramentas de IA.",
+    "WebMCP depende da API do navegador e os formulários não têm autoenvio."
+  ]
+}

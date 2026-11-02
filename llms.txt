@@ -1,0 +1,29 @@
+# Ora Condomínio Residencial
+
+> apartamentos de 2 e 3 dormitórios com sacada e churrasqueira, vaga de garagem e lazer completo com piscinas. Possibilidade de financiar até 100%.
+
+## Informações principais
+
+- Localização: Rua Pirapo, 1553, Igara, Canoas, RS
+- Tipologia declarada: Place
+- Página oficial: [Ora Condomínio Residencial](https://ora.mcmv-rs.com.br/)
+
+## Conteúdo da página
+
+- Apartamento com sacada e churrasqueira no Igara
+- Sacada com churrasqueira, vaga de garagem e lazer para a família toda, no Igara.
+- Piscinas, espaço gourmet, kids, coworking e pet: o dia a dia inteiro no mesmo endereço.
+- PISCINAS ADULTO E INFANTIL
+- Perto de transporte, compras e estudo. No Igara, perto do que você precisa.
+- O que você precisa saber sobre o Ora.
+- Dúvidas sobre o Ora, o Igara e a compra
+- Comprar na planta no Igara pode caber no seu planejamento.
+- Seu apartamento no Igara.
+
+## Conteúdo detalhado
+
+- [Descrição estruturada da página](llms-full.txt)
+
+## Condições comerciais e atendimento
+
+Valores, disponibilidade, condições financeiras e prazos devem ser confirmados com o responsável. Formulários de contato e agendamento exigem ação e consentimento do visitante.
