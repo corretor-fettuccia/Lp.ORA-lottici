@@ -1,5 +1,5 @@
 {
-  "version": "7.3.5",
+  "version": "7.3.6",
   "projectId": "ora-lottici-igara-canoas-pre-lancamento-20261101",
   "projectName": "Ora Condomínio Residencial | Lottici | Igara, Canoas | 2 e 3 dormitórios + Sacada",
   "preset": "personalizado",
@@ -315,6 +315,16 @@
           "paddingMode": "custom",
           "paddingTop": 0,
           "paddingBottom": 0
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -342,7 +352,7 @@
         "anchorId": "identificacao",
         "style": {
           "enabled": true,
-          "panelOpen": false,
+          "panelOpen": true,
           "backgroundMode": "surface",
           "backgroundColor": "#ffffff",
           "backgroundColor2": "#101318",
@@ -486,6 +496,16 @@
           "originX": 50,
           "originY": 50,
           "replay": false
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -514,8 +534,8 @@
         "style": {
           "enabled": true,
           "panelOpen": true,
-          "backgroundMode": "dark",
-          "backgroundColor": "#0e3b2d",
+          "backgroundMode": "custom",
+          "backgroundColor": "#012625",
           "backgroundColor2": "#101318",
           "gradientAngle": 135,
           "primaryMode": "inherit",
@@ -552,6 +572,16 @@
           "paddingMode": "custom",
           "paddingTop": 4,
           "paddingBottom": 4
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -747,6 +777,16 @@
           "originX": 50,
           "originY": 50,
           "replay": false
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -815,7 +855,7 @@
         "anchorId": "",
         "style": {
           "enabled": true,
-          "panelOpen": false,
+          "panelOpen": true,
           "backgroundMode": "custom",
           "backgroundColor": "#012625",
           "backgroundColor2": "#101318",
@@ -854,6 +894,16 @@
           "paddingMode": "custom",
           "paddingTop": 4,
           "paddingBottom": 0
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -881,7 +931,7 @@
         "anchorId": "",
         "style": {
           "enabled": true,
-          "panelOpen": false,
+          "panelOpen": true,
           "backgroundMode": "custom",
           "backgroundColor": "#002a25",
           "backgroundColor2": "#101318",
@@ -920,6 +970,16 @@
           "paddingMode": "custom",
           "paddingTop": 4,
           "paddingBottom": 4
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -952,9 +1012,9 @@
         "anchorId": "",
         "style": {
           "enabled": true,
-          "panelOpen": false,
+          "panelOpen": true,
           "backgroundMode": "custom",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#002c28",
           "backgroundColor2": "#101318",
           "gradientAngle": 135,
           "primaryMode": "inherit",
@@ -991,6 +1051,16 @@
           "paddingMode": "custom",
           "paddingTop": 0,
           "paddingBottom": 0
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -1057,6 +1127,16 @@
           "paddingMode": "custom",
           "paddingTop": 4,
           "paddingBottom": 4
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -1089,7 +1169,7 @@
         "anchorId": "",
         "style": {
           "enabled": true,
-          "panelOpen": false,
+          "panelOpen": true,
           "backgroundMode": "custom",
           "backgroundColor": "#0e3b2d",
           "backgroundColor2": "#101318",
@@ -1128,6 +1208,16 @@
           "paddingMode": "custom",
           "paddingTop": 0,
           "paddingBottom": 0
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -1224,6 +1314,16 @@
           "originX": 50,
           "originY": 50,
           "replay": false
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -1353,6 +1453,16 @@
               "intensity": "soft"
             }
           }
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -1419,6 +1529,16 @@
           "paddingMode": "custom",
           "paddingTop": 4,
           "paddingBottom": 4
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -1529,6 +1649,16 @@
           "originX": 50,
           "originY": 50,
           "replay": false
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -1643,6 +1773,16 @@
           "originX": 50,
           "originY": 50,
           "replay": false
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -1709,6 +1849,16 @@
           "paddingMode": "custom",
           "paddingTop": 4,
           "paddingBottom": 4
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -1773,6 +1923,16 @@
           "paddingMode": "inherit",
           "paddingTop": 96,
           "paddingBottom": 96
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -1845,6 +2005,16 @@
           "originX": 50,
           "originY": 50,
           "replay": false
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -1961,6 +2131,16 @@
               "intensity": "soft"
             }
           }
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -2025,6 +2205,16 @@
           "paddingMode": "inherit",
           "paddingTop": 96,
           "paddingBottom": 96
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -2138,6 +2328,16 @@
           "originX": 50,
           "originY": 50,
           "replay": false
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -2205,6 +2405,16 @@
           "paddingMode": "inherit",
           "paddingTop": 96,
           "paddingBottom": 96
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -2279,6 +2489,16 @@
           "paddingMode": "inherit",
           "paddingTop": 96,
           "paddingBottom": 96
+        },
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
         }
       }
     },
@@ -2356,12 +2576,22 @@
           "paddingTop": 96,
           "paddingBottom": 96
         },
-        "typographyMode": "local"
+        "typographyMode": "local",
+        "background": {
+          "enabled": false,
+          "type": "color",
+          "colorMode": "solid",
+          "color1": "#ffffff",
+          "color2": "#101318",
+          "angle": 135,
+          "image": "",
+          "imageMode": "static"
+        }
       }
     }
   ],
-  "selectedSectionId": "ora-form-sender-v4-17",
-  "updatedAt": "2026-11-02T21:28:35.101Z",
+  "selectedSectionId": "ora-button-single-06",
+  "updatedAt": "2026-11-02T23:09:37.351Z",
   "templateMeta": {
     "presetId": "mcmv-100-financiado",
     "category": "Financiamento",
