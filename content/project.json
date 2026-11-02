@@ -580,12 +580,12 @@
         "localText": "#f1f0ef",
         "localMuted": "#f4bb10",
         "plants": "[{\"id\":\"ora-planta-48-94\",\"code\":\"ORA-4894\",\"title\":\"02 dormitórios 48,94 m² \",\"description\":\"2 dormitórios, 1 banheiro, sacada com churrasqueira e 1 vaga de estacionamento.\\nOPÇÃO LIVING ESTENDIDO\",\"area\":\"48,94 m²\",\"composition\":\"2 dormitórios\",\"bathrooms\":\"1 banheiro\",\"features\":\"Sacada com churrasqueira|Vaga privativa de estacionamento|Todos os pontos com água quente|Espera seca para split|Rebaixo de gesso no banheiro e na cozinha\",\"image\":\"assets/images/smart-plant-plant-1-image-4.webp\",\"fullImage\":\"assets/images/smart-plant-plant-1-fullimage-5.png\",\"positionImage\":\"assets/images/smart-plant-plant-1-positionimage-6.webp\",\"position\":\"Unidade Finais [04, 05, 06]\\nOPÇÃO LIVING ESTENDIDO\"},{\"id\":\"ora-planta-49-67\",\"code\":\"ORA-4967\",\"title\":\"02 dormitórios 49,67 m²\",\"description\":\"2 dormitórios, 1 banheiro, sacada com churrasqueira e 1 vaga de estacionamento.\\nOPÇÃO LIVING ESTENDIDO\",\"area\":\"49,67 m²\",\"composition\":\"2 dormitórios\",\"bathrooms\":\"1 banheiro\",\"features\":\"Sacada com churrasqueira|Vaga privativa de estacionamento|Todos os pontos com água quente|Espera seca para split|Rebaixo de gesso no banheiro e na cozinha\",\"image\":\"assets/images/smart-plant-plant-2-image-7.webp\",\"fullImage\":\"assets/images/smart-plant-plant-2-fullimage-8.png\",\"positionImage\":\"assets/images/smart-plant-plant-2-positionimage-9.webp\",\"position\":\"Unidade Finais [02, 08]\\nOPÇÃO LIVING ESTENDIDO\"},{\"id\":\"ora-planta-60-86\",\"code\":\"ORA-6086\",\"title\":\"03 dormitórios 60,86 m²\",\"description\":\"3 dormitórios, 1 banheiro, sacada com churrasqueira e 1 vaga de estacionamento.\\nOPÇÃO LIVING ESTENDIDO\",\"area\":\"60,86 m²\",\"composition\":\"3 dormitórios\",\"bathrooms\":\"1 banheiro\",\"features\":\"Sacada com churrasqueira|Vaga privativa de estacionamento|Todos os pontos com água quente|Espera seca para split|Rebaixo de gesso no banheiro e na cozinha\",\"image\":\"assets/images/smart-plant-plant-3-image-10.webp\",\"fullImage\":\"assets/images/smart-plant-plant-3-fullimage-11.png\",\"positionImage\":\"assets/images/smart-plant-plant-3-positionimage-12.webp\",\"position\":\"Unidade Finais [01, 07]\\nOPÇÃO LIVING ESTENDIDO\"}]",
-        "magnifierTouchToggle": true,
+        "magnifierTouchToggle": false,
         "magnifierClickPosition": false,
         "magnifierDragPosition": false,
         "magnifierFollowMouse": false,
-        "magnifierZoom": "3",
-        "magnifierStartHidden": false
+        "magnifierZoom": "2",
+        "magnifierStartHidden": true
       },
       "settings": {
         "visible": true,
@@ -2308,8 +2308,8 @@
       }
     }
   ],
-  "selectedSectionId": "ora-footer-19",
-  "updatedAt": "2026-11-02T13:21:49.232Z",
+  "selectedSectionId": "ora-smart-plant-02",
+  "updatedAt": "2026-11-02T14:48:35.380Z",
   "templateMeta": {
     "presetId": "mcmv-100-financiado",
     "category": "Financiamento",
