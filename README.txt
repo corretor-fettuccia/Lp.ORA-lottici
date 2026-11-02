@@ -1,7 +1,7 @@
 LANDING PAGE COMPILADA — IMOBIFY STUDIO 7.2.0
 
 Projeto: Ora Condomínio Residencial | Lottici | Igara, Canoas | 2 e 3 dormitórios + Sacada
-Gerado em: 02/11/2026, 01:00:21
+Gerado em: 02/11/2026, 10:22:00
 
 PUBLICAÇÃO
 Envie todo o conteúdo desta pasta para a raiz do seu serviço de hospedagem, GitHub Pages, Netlify, Vercel ou servidor web. A página é estática e não exige banco de dados.
@@ -41,3 +41,4 @@ assets/images/property-slider-image3-20.webp
 assets/images/property-slider-slide-4-image-21.webp
 assets/images/property-slider-slide-5-image-22.webp
 assets/images/property-slider-slide-6-image-23.webp
+assets/images/whatsapp-flutuante-pro-hoverimage-24.webp

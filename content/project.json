@@ -136,7 +136,7 @@
   },
   "seo": {
     "title": "Ora - 2 e 3 dormitório | Lottici | MCMV | Igara, Canoas",
-    "description": "apartamentos de 2 e 3 dormitórios com sacada e churrasqueira, vaga de garagem e lazer completo com piscinas. Possibilidade de financiar até 100%. ",
+    "description": "Mensais a partir de R$1.890/mês Apartamentos de 2 e 3 dormitórios com sacada e churrasqueira, garagem e lazer com piscina. Até 100% financiado pelo MCMV.",
     "keywords": "Minha Casa Minha Vida Canoas, apartamentos Minha Casa Minha Vida Canoas, apartamento MCMV Canoas, apartamentos financiados pela Caixa Canoas, apartamento na planta Minha Casa Minha Vida, apartamentos à venda Canoas RS, apartamentos novos Canoas, apartamento com entrada facilitada Canoas, financiamento habitacional Caixa Canoas, simulação Minha Casa Minha Vida Canoas, apartamento com FGTS Canoas, comprar apartamento em Canoas, apartamento 2 dormitórios Canoas, apartamento 3 dormitórios Canoas, apartamentos Igara Canoas, apartamento à venda bairro Igara, apartamento na planta Canoas, lançamento imobiliário Canoas, pré-lançamento Canoas, ORA Condomínio Residencial, ORA Residencial Canoas, ORA Lottici, Lottici Canoas, Lottici Construtora, empreendimento ORA Canoas, ORA Minha Casa Minha Vida, apartamento ORA Igara, Rua Pirapó 1553 Canoas, apartamento próximo ULBRA Canoas, apartamento perto Trensurb Canoas, apartamento com sacada e churrasqueira Canoas, apartamento com piscina Canoas, condomínio com infraestrutura completa Canoas, apartamento garden Canoas, apartamento com pátio privativo Canoas, apartamento com elevador Canoas, apartamento com vaga de garagem Canoas, apartamento com churrasqueira Igara, apartamento 2 quartos Canoas, apartamento 3 quartos Canoas, imóvel financiado Canoas, comprar primeiro apartamento Canoas, sair do aluguel Canoas, financiamento de apartamento na planta Canoas",
     "canonical": "https://ora.mcmv-rs.com.br",
     "sitemapEnabled": "yes",
@@ -159,7 +159,7 @@
     "organizationName": "Lottici",
     "organizationUrl": "https://ora.mcmv-rs.com.br",
     "lastReviewed": "2026-11-01",
-    "sourceNotes": "Lottici-Ora-descricao (01/11/2026). Fotos, plantas oficiais, logotipo e valores não fornecidos; confirmar disponibilidade, valores, vagas e condições de financiamento antes da publicação.",
+    "sourceNotes": "Lottici v. (01/11/2026). Fotos, plantas oficiais, logotipo e valores não fornecidos; confirmar disponibilidade, valores, vagas e condições de financiamento antes da publicação.",
     "localInsight": "Ora Condomínio Residencial: Rua Pirapo, 1553, Igara, Canoas/RS. Lançamento da Lottici com 7 torres e apartamentos de 2 e 3 dormitórios, com sacada e churrasqueira, vaga privativa e lazer com piscinas adulto e infantil. Áreas privativas de 48,94 m², 49,67 m² e 60,86 m². Previsão de entrega da Torre A em dezembro de 2028.",
     "aiSearch": "allow",
     "aiTraining": "allow"
@@ -192,7 +192,7 @@
       "props": {
         "eyebrow": "ORA CONDOMÍNIO RESIDENCIAL · LOTTICI · IGARA, CANOAS",
         "title": "Apartamento com sacada e churrasqueira no Igara",
-        "subtitle": "Apartamentos de 2 e 3 dormitórios com sacada e churrasqueira, vaga de garagem e piscinas adulto e infantil. Pré-lançamento com possibilidade de financiar até 100%.",
+        "subtitle": "Apartamentos de 2 e 3 dormitórios com sacada e churrasqueira, vaga de garagem e piscinas adulto e infantil. Unidades com possibilidade de financiar até 100%. Renda familiar de 5mil a 13mil.",
         "primaryCta": "Conhecer o lazer",
         "primaryLink": "#lazer",
         "secondaryCta": "Ver condições de compra",
@@ -390,49 +390,49 @@
           "items": {
             "0": {
               "preset": "light-sweep",
-              "durationMs": 950,
+              "durationMs": 300,
               "delayMs": 0,
               "order": 1,
               "intensity": "soft"
             },
             "1": {
               "preset": "depth-parallax",
-              "durationMs": 730,
+              "durationMs": 300,
               "delayMs": 80,
               "order": 2,
               "intensity": "soft"
             },
             "2": {
               "preset": "cinema-focus",
-              "durationMs": 730,
+              "durationMs": 300,
               "delayMs": 80,
               "order": 3,
               "intensity": "soft"
             },
             "3": {
-              "preset": "architectural-curtain",
-              "durationMs": 730,
+              "preset": "bounce-fade",
+              "durationMs": 400,
               "delayMs": 80,
               "order": 4,
               "intensity": "soft"
             },
             "4": {
-              "preset": "light-sweep",
-              "durationMs": 730,
+              "preset": "layer-assemble",
+              "durationMs": 500,
               "delayMs": 80,
               "order": 5,
-              "intensity": "soft"
+              "intensity": "balanced"
             },
             "5": {
-              "preset": "depth-parallax",
-              "durationMs": 730,
+              "preset": "bounce-fade",
+              "durationMs": 400,
               "delayMs": 80,
               "order": 6,
               "intensity": "soft"
             },
             "6": {
               "preset": "cinema-focus",
-              "durationMs": 730,
+              "durationMs": 400,
               "delayMs": 80,
               "order": 7,
               "intensity": "soft"
@@ -442,6 +442,34 @@
               "durationMs": 730,
               "delayMs": 80,
               "order": 8,
+              "intensity": "soft"
+            },
+            "8": {
+              "preset": "none",
+              "durationMs": 750,
+              "delayMs": 120,
+              "order": 9,
+              "intensity": "soft"
+            },
+            "9": {
+              "preset": "none",
+              "durationMs": 750,
+              "delayMs": 120,
+              "order": 10,
+              "intensity": "soft"
+            },
+            "10": {
+              "preset": "none",
+              "durationMs": 750,
+              "delayMs": 120,
+              "order": 11,
+              "intensity": "soft"
+            },
+            "11": {
+              "preset": "none",
+              "durationMs": 750,
+              "delayMs": 120,
+              "order": 12,
               "intensity": "soft"
             }
           }
@@ -553,11 +581,11 @@
         "localMuted": "#f4bb10",
         "plants": "[{\"id\":\"ora-planta-48-94\",\"code\":\"ORA-4894\",\"title\":\"02 dormitórios 48,94 m² \",\"description\":\"2 dormitórios, 1 banheiro, sacada com churrasqueira e 1 vaga de estacionamento.\\nOPÇÃO LIVING ESTENDIDO\",\"area\":\"48,94 m²\",\"composition\":\"2 dormitórios\",\"bathrooms\":\"1 banheiro\",\"features\":\"Sacada com churrasqueira|Vaga privativa de estacionamento|Todos os pontos com água quente|Espera seca para split|Rebaixo de gesso no banheiro e na cozinha\",\"image\":\"assets/images/smart-plant-plant-1-image-4.webp\",\"fullImage\":\"assets/images/smart-plant-plant-1-fullimage-5.png\",\"positionImage\":\"assets/images/smart-plant-plant-1-positionimage-6.webp\",\"position\":\"Unidade Finais [04, 05, 06]\\nOPÇÃO LIVING ESTENDIDO\"},{\"id\":\"ora-planta-49-67\",\"code\":\"ORA-4967\",\"title\":\"02 dormitórios 49,67 m²\",\"description\":\"2 dormitórios, 1 banheiro, sacada com churrasqueira e 1 vaga de estacionamento.\\nOPÇÃO LIVING ESTENDIDO\",\"area\":\"49,67 m²\",\"composition\":\"2 dormitórios\",\"bathrooms\":\"1 banheiro\",\"features\":\"Sacada com churrasqueira|Vaga privativa de estacionamento|Todos os pontos com água quente|Espera seca para split|Rebaixo de gesso no banheiro e na cozinha\",\"image\":\"assets/images/smart-plant-plant-2-image-7.webp\",\"fullImage\":\"assets/images/smart-plant-plant-2-fullimage-8.png\",\"positionImage\":\"assets/images/smart-plant-plant-2-positionimage-9.webp\",\"position\":\"Unidade Finais [02, 08]\\nOPÇÃO LIVING ESTENDIDO\"},{\"id\":\"ora-planta-60-86\",\"code\":\"ORA-6086\",\"title\":\"03 dormitórios 60,86 m²\",\"description\":\"3 dormitórios, 1 banheiro, sacada com churrasqueira e 1 vaga de estacionamento.\\nOPÇÃO LIVING ESTENDIDO\",\"area\":\"60,86 m²\",\"composition\":\"3 dormitórios\",\"bathrooms\":\"1 banheiro\",\"features\":\"Sacada com churrasqueira|Vaga privativa de estacionamento|Todos os pontos com água quente|Espera seca para split|Rebaixo de gesso no banheiro e na cozinha\",\"image\":\"assets/images/smart-plant-plant-3-image-10.webp\",\"fullImage\":\"assets/images/smart-plant-plant-3-fullimage-11.png\",\"positionImage\":\"assets/images/smart-plant-plant-3-positionimage-12.webp\",\"position\":\"Unidade Finais [01, 07]\\nOPÇÃO LIVING ESTENDIDO\"}]",
         "magnifierTouchToggle": true,
-        "magnifierClickPosition": true,
-        "magnifierDragPosition": true,
+        "magnifierClickPosition": false,
+        "magnifierDragPosition": false,
         "magnifierFollowMouse": false,
         "magnifierZoom": "3",
-        "magnifierStartHidden": true
+        "magnifierStartHidden": false
       },
       "settings": {
         "visible": true,
@@ -568,7 +596,7 @@
         "anchorId": "planta",
         "style": {
           "enabled": true,
-          "panelOpen": true,
+          "panelOpen": false,
           "backgroundMode": "inherit",
           "backgroundColor": "#ffffff",
           "backgroundColor2": "#101318",
@@ -577,7 +605,7 @@
           "primaryColor": "#d7ff3f",
           "accentMode": "inherit",
           "accentColor": "#7ca1ff",
-          "actionBackgroundMode": "auto",
+          "actionBackgroundMode": "inherit",
           "actionBackgroundColor": "#d7ff3f",
           "actionTextMode": "auto",
           "actionTextColor": "#101318",
@@ -601,12 +629,12 @@
           "titleEffect": "cinematic",
           "titleEffectColor": "#000000",
           "titleEffectStrength": 62,
-          "bodyEffect": "contrast",
+          "bodyEffect": "glow",
           "bodyEffectColor": "#000000",
           "bodyEffectStrength": 36,
           "paddingMode": "custom",
           "paddingTop": 0,
-          "paddingBottom": 4
+          "paddingBottom": 0
         },
         "elementMotion": {
           "baseDelayMs": 130,
@@ -739,7 +767,7 @@
         "showArrows": true,
         "textPadding": 20,
         "mobileTextPadding": 16,
-        "fillHorizontal": false,
+        "fillHorizontal": true,
         "controlShape": "round",
         "controlPosition": "middle",
         "mobileHeight": 720,
@@ -774,9 +802,9 @@
         "anchorId": "",
         "style": {
           "enabled": true,
-          "panelOpen": false,
-          "backgroundMode": "inherit",
-          "backgroundColor": "#ffffff",
+          "panelOpen": true,
+          "backgroundMode": "custom",
+          "backgroundColor": "#012625",
           "backgroundColor2": "#101318",
           "gradientAngle": 135,
           "primaryMode": "inherit",
@@ -820,7 +848,7 @@
       "id": "ora-button-single-12",
       "type": "button-single",
       "props": {
-        "label": "Solicitar plantas e tabela de valores",
+        "label": "Parcelas a partir de R$1.890,00/mês",
         "href": "#contato",
         "ariaLabel": "Solicitar plantas e tabela de valores",
         "icon": "fa-solid fa-arrow-right",
@@ -840,7 +868,7 @@
         "anchorId": "",
         "style": {
           "enabled": true,
-          "panelOpen": true,
+          "panelOpen": false,
           "backgroundMode": "custom",
           "backgroundColor": "#002a25",
           "backgroundColor2": "#101318",
@@ -911,8 +939,8 @@
         "anchorId": "",
         "style": {
           "enabled": true,
-          "panelOpen": true,
-          "backgroundMode": "inherit",
+          "panelOpen": false,
+          "backgroundMode": "custom",
           "backgroundColor": "#ffffff",
           "backgroundColor2": "#101318",
           "gradientAngle": 135,
@@ -957,10 +985,10 @@
       "id": "button-single-1793587996829-4z2m5",
       "type": "button-single",
       "props": {
-        "label": "Solicitar plantas e tabela de valores",
+        "label": "Tenho renda entre 5mil e 13mil",
         "href": "#contato",
         "ariaLabel": "Solicitar plantas e tabela de valores",
-        "icon": "fa-solid fa-arrow-right",
+        "icon": "fa-solid fa-user-group",
         "iconPosition": "end",
         "openNewTab": false,
         "alignment": "center",
@@ -977,7 +1005,7 @@
         "anchorId": "",
         "style": {
           "enabled": true,
-          "panelOpen": true,
+          "panelOpen": false,
           "backgroundMode": "custom",
           "backgroundColor": "#012d28",
           "backgroundColor2": "#101318",
@@ -1049,8 +1077,8 @@
         "style": {
           "enabled": true,
           "panelOpen": false,
-          "backgroundMode": "inherit",
-          "backgroundColor": "#ffffff",
+          "backgroundMode": "custom",
+          "backgroundColor": "#0e3b2d",
           "backgroundColor2": "#101318",
           "gradientAngle": 135,
           "primaryMode": "inherit",
@@ -1110,8 +1138,8 @@
         "backgroundColor": "#f7faf5",
         "cardColor": "#FFFFFF",
         "textColor": "#404040",
-        "cornerRadius": 3,
-        "cardGap": 8,
+        "cornerRadius": 36,
+        "cardGap": 21,
         "categoryFilter": false,
         "showDescriptions": true,
         "items": "pool|Piscinas adulto e infantil|Área de lazer do condomínio.|Lazer\ncelebration|Salão de festas|Área de lazer do condomínio.|Lazer\nrestaurant|Espaço gourmet|Área de lazer do condomínio.|Lazer\nchild_hat|Espaço kids e brinquedoteca|Área de lazer do condomínio.|Lazer\npark|Playground e quadra esportiva infantil|Área de lazer do condomínio.|Lazer\nlaptop|Coworking|Conveniência do condomínio.|Conveniência\ngroups|Espaço multiuso|Conveniência do condomínio.|Conveniência\npets|Espaço pet|Conveniência do condomínio.|Conveniência\ncheck_circle|Marketplace|Conveniência do condomínio.|Conveniência\nlocal_parking|Vaga privativa de estacionamento|1 vaga por apartamento.|Infraestrutura\nelevator|1 elevador por torre|Infraestrutura de cada torre.|Infraestrutura\n*add_column_right|Sacada com churrasqueira|Apartamentos de 2 e 3 dormitórios com sacada.|Conforto",
@@ -1322,7 +1350,7 @@
         "label": "Quero conhecer o Ora, as plantas e as condições",
         "href": "#contato",
         "ariaLabel": "Solicitar apresentação do Ora, das plantas e das condições",
-        "icon": "fa-solid fa-arrow-right",
+        "icon": "fa-solid fa-person-running",
         "iconPosition": "end",
         "openNewTab": false,
         "alignment": "center",
@@ -1339,7 +1367,7 @@
         "anchorId": "",
         "style": {
           "enabled": true,
-          "panelOpen": true,
+          "panelOpen": false,
           "backgroundMode": "inherit",
           "backgroundColor": "#ffffff",
           "backgroundColor2": "#101318",
@@ -1485,11 +1513,11 @@
         "title": "O que você precisa saber sobre o Ora.",
         "subtitle": "Informações objetivas para comparar antes de decidir.",
         "lead": "Ora Condomínio Residencial · Rua Pirapo, 1553 · Igara, Canoas/RS · Lottici.",
-        "body": "EMPREENDIMENTO — condomínio residencial com 7 torres; Torre A com previsão de entrega em dezembro de 2028.\n\nTIPOS DE PLANTA — 48,94 m² e 49,67 m² (2 dormitórios, 1 banheiro) e 60,86 m² (3 dormitórios, 1 banheiro), todos com sacada e churrasqueira.\n\nVAGA — 1 vaga de estacionamento privativa por apartamento.\n\nACABAMENTOS E INSTALAÇÕES — rebaixo de gesso no banheiro e na cozinha; mais pontos elétricos na sala para facilitar a troca de layout; todos os pontos com água quente; medidores individuais de água e gás; espera seca para split.\n\nOPÇÕES — living estendido e apartamentos com garden.\n\nEDIFÍCIO — 1 elevador por torre.\n\nLAZER — salão de festas, espaço gourmet, piscinas adulto e infantil, espaço kids, brinquedoteca, playground, quadra esportiva infantil, espaço multiuso, coworking, espaço pet e marketplace.\n\nCONDIÇÕES — financiamento bancário, carta de crédito e FGTS; possibilidade de financiar até 100% do valor, mediante comprovação de renda. Valores sob consulta.",
+        "body": "EMPREENDIMENTO: \nPavimentos/Andares: 09 Pavimentos;\nUnidades por Pavimento/Andar : 08 unidades;\nBlocos/Torres: 07 torres; \n\nENTREGA: Torre A com previsão de entrega em dezembro de 2028.\n\nTIPOS DE PLANTA: 48,94 m² e 49,67 m² (2 dormitórios, 1 banheiro) e 60,86 m² (3 dormitórios, 1 banheiro), todos com sacada e churrasqueira.\n\nVAGA: 01 vaga de estacionamento privativa por apartamento.\n\nACABAMENTOS E INSTALAÇÕES: rebaixo de gesso no banheiro e na cozinha; mais pontos elétricos na sala para facilitar a troca de layout; todos os pontos com água quente; medidores individuais de água e gás; espera seca para split.\n\nOPÇÕES: living estendido e apartamentos com garden.\n\nLAZER: salão de festas, espaço gourmet, piscinas adulto e infantil, espaço kids, brinquedoteca, playground, quadra esportiva infantil, espaço multiuso, coworking, espaço pet e marketplace.\n\nCONDIÇÕES: Financiamento bancário Minha Casa Minha Vida, carta de crédito e FGTS; possibilidade de financiar até 100% do valor, mediante comprovação de renda. Valores sob consulta.",
         "useProjectProfile": true,
         "headingTypeface": "project",
         "bodyTypeface": "serif",
-        "textAlign": "left",
+        "textAlign": "justify",
         "maxWidth": 980,
         "paddingX": 28,
         "paddingY": 70,
@@ -1526,7 +1554,7 @@
         "leadTracking": 0.03,
         "bodyTracking": -0.04,
         "motionPreset": "cinema-soft",
-        "lineFit": "balanced"
+        "lineFit": "editorial"
       },
       "settings": {
         "visible": true,
@@ -1583,10 +1611,10 @@
       "id": "ora-button-single-14",
       "type": "button-single",
       "props": {
-        "label": "Quero conhecer o Ora, as plantas e as condições",
+        "label": "Onde encaminho documentação?",
         "href": "#contato",
         "ariaLabel": "Solicitar apresentação do Ora, das plantas e das condições",
-        "icon": "fa-solid fa-arrow-right",
+        "icon": "fa-solid fa-user-check",
         "iconPosition": "end",
         "openNewTab": false,
         "alignment": "center",
@@ -1603,7 +1631,7 @@
         "anchorId": "",
         "style": {
           "enabled": true,
-          "panelOpen": true,
+          "panelOpen": false,
           "backgroundMode": "inherit",
           "backgroundColor": "#ffffff",
           "backgroundColor2": "#101318",
@@ -1789,10 +1817,10 @@
         "title": "Comprar na planta no Igara pode caber no seu planejamento.",
         "price": "Até 100%",
         "priceLabel": "Possibilidade de financiar o valor do imóvel (mediante comprovação de renda)",
-        "downPaymentLabel": "Formas de pagamento",
-        "downPayment": "Financiamento, carta de crédito e FGTS",
+        "downPaymentLabel": "Parcelas a partir",
+        "downPayment": "R$ 1.890,00",
         "installmentsLabel": "Valores",
-        "installments": "Sob consulta",
+        "installments": "Á partir de 270mil",
         "note": "O empreendimento, na planta, permite financiamento de até 100% do valor, mediante comprovação de renda e análise de crédito. Aceita financiamento bancário, carta de crédito e FGTS. Valores sob consulta: solicite a tabela atualizada para conhecer a composição completa da compra. Torre A com previsão de entrega em dezembro de 2028. Condições sujeitas a análise de crédito e às regras vigentes.",
         "cta": "Quero avaliar minhas condições",
         "anchor": "#contato"
@@ -1968,7 +1996,7 @@
         "showIntro": true,
         "eyebrow": "SEU PRÓXIMO PASSO · CONHEÇA O ORA",
         "title": "Seu apartamento no Igara.",
-        "copy": "Condições e financiamento de até 100% para quem comprova renda. Fale com nosso time de especialistas e receba plantas, valores e a disponibilidade atualizados.",
+        "copy": "Entre em contato com departamento comercial para obter orientações sobre o envio de documentação, consultar valores e disponibilidade das unidades ou agendar uma visita ao decorado.",
         "product": "Ora Lottici",
         "endpoint": "https://script.google.com/macros/s/AKfycbxxA_8OOrK8oSJk6dFSC4bSvIHxICKLYG6ZpalORyFnM5fe-I4eLil-KGsKyoD31NMWlg/exec",
         "buttonText": "Solicitar apresentação e condições",
@@ -2144,12 +2172,12 @@
         "showLabel": false,
         "pulse": true,
         "showHoverBubble": true,
-        "hoverText": "Estamos disponíveis também",
+        "hoverText": "Entre em contato com nosso departamento comercial",
         "openNewTab": true,
         "backgroundColor": "#25d366",
         "iconColor": "#ffffff",
         "textColor": "#ffffff",
-        "hoverImage": ""
+        "hoverImage": "assets/images/whatsapp-flutuante-pro-hoverimage-24.webp"
       },
       "settings": {
         "visible": true,
@@ -2207,7 +2235,7 @@
       "type": "footer",
       "props": {
         "brand": "Ora Condomínio Residencial",
-        "role": "Lottici · Canoas/RS · Atendimento: Roberto Fettuccia",
+        "role": "Lottici · Canoas/RS",
         "professionalDescription": "Ora Condomínio Residencial:  Lottici no Igara, Canoas, com 7 torres e apartamentos de 2 e 3 dormitórios, sacada com churrasqueira, vaga de garagem e lazer completo.",
         "license": "CRECI 83599-F",
         "phone": "",
@@ -2225,7 +2253,7 @@
         "socialLabels": "icons",
         "socialIconSize": 44,
         "socialOpenNewTab": true,
-        "disclaimer": "Conteúdo informativo baseado nas informações comerciais fornecidas em 01/11/2026. Localização: Rua Pirapo, 1553, Igara, Canoas/RS. Condomínio com 7 torres; isso não representa disponibilidade de unidades. Torre A com previsão de entrega em dezembro de 2028. Áreas privativas de 48,94 m², 49,67 m² e 60,86 m². Valores mediante consulta. Financiamento de até 100% do valor sujeito à comprovação de renda, análise de crédito e regras vigentes; FGTS e carta de crédito conforme condições aplicáveis. Imagens e perspectivas devem ser identificadas como ilustrativas; consulte os documentos e materiais oficiais antes da contratação."
+        "disclaimer": "Localização: Rua Pirapo, 1553, Igara, Canoas/RS. Condomínio com 7 torres; isso não representa disponibilidade de unidades. Torre A com previsão de entrega em dezembro de 2028. Áreas privativas de 48,94 m², 49,67 m² e 60,86 m². Valores mediante consulta. Financiamento de até 100% do valor sujeito à comprovação de renda, análise de crédito e regras vigentes; FGTS e carta de crédito conforme condições aplicáveis. Imagens e perspectivas devem ser identificadas como ilustrativas; consulte os documentos e materiais oficiais antes da contratação."
       },
       "settings": {
         "visible": true,
@@ -2280,8 +2308,8 @@
       }
     }
   ],
-  "selectedSectionId": "ora-anti-ia-copy-policy-18",
-  "updatedAt": "2026-11-02T04:00:10.169Z",
+  "selectedSectionId": "ora-footer-19",
+  "updatedAt": "2026-11-02T13:21:49.232Z",
   "templateMeta": {
     "presetId": "mcmv-100-financiado",
     "category": "Financiamento",

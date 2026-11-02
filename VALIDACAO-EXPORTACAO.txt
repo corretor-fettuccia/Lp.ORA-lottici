@@ -1,6 +1,6 @@
 IMOBIFY STUDIO 7.2.0 — NAVEGAÇÃO AGÊNTICA E INDEXAÇÃO
 Status: APROVADO COM AVISOS QUANDO APLICÁVEL
-Imagens no sitemap: 25
+Imagens no sitemap: 26
 
 VERIFICAÇÕES
 [OK] html-main: O HTML deve conter um landmark <main> acessível.
