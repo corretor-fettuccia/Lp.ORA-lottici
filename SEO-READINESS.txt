@@ -1,4 +1,4 @@
-IMOBIFY 7.2.0 — READINESS DO RESULTADO
+IMOBIFY 7.3.5 — READINESS DO RESULTADO
 
 Média potencial: 9.2/10
 Core Web Vitals potencial: 9.2/10

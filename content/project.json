@@ -1,5 +1,5 @@
 {
-  "version": "7.2.0",
+  "version": "7.3.5",
   "projectId": "ora-lottici-igara-canoas-pre-lancamento-20261101",
   "projectName": "Ora Condomínio Residencial | Lottici | Igara, Canoas | 2 e 3 dormitórios + Sacada",
   "preset": "personalizado",
@@ -480,7 +480,7 @@
           "distance": 46,
           "blur": 5,
           "scale": 1.025,
-          "threshold": 0.2,
+          "threshold": 0.06,
           "easing": "cubic-bezier(.22,1,.36,1)",
           "direction": "bottom",
           "originX": 50,
@@ -734,6 +734,19 @@
               "intensity": "soft"
             }
           }
+        },
+        "motion": {
+          "duration": 100,
+          "delay": 0,
+          "distance": 46,
+          "blur": 5,
+          "scale": 1.025,
+          "threshold": 0.06,
+          "easing": "cubic-bezier(.22,1,.36,1)",
+          "direction": "bottom",
+          "originX": 50,
+          "originY": 50,
+          "replay": false
         }
       }
     },
@@ -802,7 +815,7 @@
         "anchorId": "",
         "style": {
           "enabled": true,
-          "panelOpen": true,
+          "panelOpen": false,
           "backgroundMode": "custom",
           "backgroundColor": "#012625",
           "backgroundColor2": "#101318",
@@ -1205,7 +1218,7 @@
           "distance": 46,
           "blur": 5,
           "scale": 1.025,
-          "threshold": 0.2,
+          "threshold": 0.06,
           "easing": "cubic-bezier(.22,1,.36,1)",
           "direction": "bottom",
           "originX": 50,
@@ -1503,6 +1516,19 @@
               "intensity": "soft"
             }
           }
+        },
+        "motion": {
+          "duration": 800,
+          "delay": 0,
+          "distance": 46,
+          "blur": 5,
+          "scale": 1.025,
+          "threshold": 0.06,
+          "easing": "cubic-bezier(.22,1,.36,1)",
+          "direction": "bottom",
+          "originX": 50,
+          "originY": 50,
+          "replay": false
         }
       }
     },
@@ -1604,6 +1630,19 @@
           "paddingMode": "inherit",
           "paddingTop": 96,
           "paddingBottom": 96
+        },
+        "motion": {
+          "duration": 800,
+          "delay": 0,
+          "distance": 46,
+          "blur": 5,
+          "scale": 1.025,
+          "threshold": 0.06,
+          "easing": "cubic-bezier(.22,1,.36,1)",
+          "direction": "bottom",
+          "originX": 50,
+          "originY": 50,
+          "replay": false
         }
       }
     },
@@ -1880,7 +1919,7 @@
           "distance": 46,
           "blur": 5,
           "scale": 1.025,
-          "threshold": 0.2,
+          "threshold": 0.06,
           "easing": "linear",
           "direction": "bottom",
           "originX": 50,
@@ -2086,6 +2125,19 @@
           "paddingMode": "custom",
           "paddingTop": 0,
           "paddingBottom": 0
+        },
+        "motion": {
+          "duration": 800,
+          "delay": 0,
+          "distance": 46,
+          "blur": 5,
+          "scale": 1.025,
+          "threshold": 0.01,
+          "easing": "cubic-bezier(.22,1,.36,1)",
+          "direction": "bottom",
+          "originX": 50,
+          "originY": 50,
+          "replay": false
         }
       }
     },
@@ -2308,8 +2360,8 @@
       }
     }
   ],
-  "selectedSectionId": "ora-smart-plant-02",
-  "updatedAt": "2026-11-02T14:48:35.380Z",
+  "selectedSectionId": "ora-form-sender-v4-17",
+  "updatedAt": "2026-11-02T21:28:35.101Z",
   "templateMeta": {
     "presetId": "mcmv-100-financiado",
     "category": "Financiamento",
