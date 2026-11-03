@@ -586,7 +586,7 @@
       modal.style.bottom = 'auto';
     }
 
-    function unlockPage(restorePlantPosition) {
+    function unlockPage() {
       document.documentElement.classList.remove('smart-plant-modal-open');
       document.body.classList.remove('smart-plant-body-locked');
       document.body.style.top = '';
@@ -598,21 +598,10 @@
       window.removeEventListener('resize', viewportHandler);
       window.removeEventListener('orientationchange', viewportHandler);
       viewportHandler = null;
-      // O Core aplica html{scroll-behavior:smooth}. A chamada antiga a
-      // scrollTo(0, lockedScrollY) iniciava uma rolagem suave de volta às
-      // plantas, concorrendo com o salto posterior para #contato. Restaurar
-      // a posição SOMENTE no fechamento manual, e sempre de modo imediato.
-      if (restorePlantPosition) {
-        var html = document.documentElement;
-        var old = html.style.getPropertyValue('scroll-behavior');
-        var priority = html.style.getPropertyPriority('scroll-behavior');
-        html.style.setProperty('scroll-behavior', 'auto', 'important');
-        try { window.scrollTo(0, lockedScrollY || 0); }
-        finally {
-          if (old) html.style.setProperty('scroll-behavior', old, priority);
-          else html.style.removeProperty('scroll-behavior');
-        }
-      }
+      // Safari iOS restaura o scroll com mais consistência após liberar o body.
+      window.requestAnimationFrame(function () {
+        window.scrollTo(0, lockedScrollY || 0);
+      });
     }
     function fitModalToViewport() {
       if (!modal || !modal.classList.contains('is-open')) return;
@@ -835,17 +824,15 @@
       };
     }
 
-    function closeModal(navigateToForm) {
+    function closeModal() {
       if (!modal || closing || !modal.classList.contains('is-open')) return;
       closing = true;
       modal.classList.remove('is-open');
       modal.setAttribute('aria-hidden','true');
       if (magnifierCleanup) { try { magnifierCleanup(); } catch (_) {} magnifierCleanup = null; }
-      // CTA de formulário: não provocar qualquer retorno às plantas.
-      // Fechamento manual (X/Escape/fundo): preservar o scroll anterior.
-      unlockPage(!navigateToForm);
+      unlockPage();
       active = null;
-      var restore = navigateToForm ? null : lastTrigger;
+      var restore = lastTrigger;
       lastTrigger = null;
       window.setTimeout(function () {
         closing = false;
@@ -880,8 +867,6 @@
       }
       if (position) position.textContent = active.position || '';
       if (positionBlock) positionBlock.style.display = (active.position || active.positionImage) ? '' : 'none';
-      var actionStatus = modal.querySelector('[data-smart-plant-action-status]');
-      if (actionStatus) actionStatus.textContent = '';
       if (action) action.textContent = root.dataset.actionMode === 'form' ? (root.dataset.actionLabelForm || 'Gostei desta planta. Quero mais informações') : (root.dataset.actionLabelWhats || 'Gostei desta! Quero mais informações');
       modal.classList.add('is-open');
       modal.setAttribute('aria-hidden','false');
@@ -920,43 +905,31 @@
         plantTitle:active.title,
         area:active.area,
         message:fillTemplate(root.dataset.formContextMessage, root, active),
-        targetAnchor:String(root.dataset.formAnchor || '').trim().replace(/^#/,'')
+        targetAnchor:String(root.dataset.formAnchor || '').replace(/^#/,'')
       };
 
-      // A âncora configurada identifica primeiro o destino real; a existência de
-      // um Popup em outra parte da página não deve sequestrar o clique do V4.
-      function targetScope() {
-        var anchor = detail.targetAnchor;
-        if (!anchor) return null;
-        try { return document.getElementById(anchor); } catch (_) { return null; }
-      }
-      function pluginFor(scope, pluginName) {
-        if (!scope) return null;
-        var selector = '[data-plugin="' + pluginName + '"]';
-        if (scope.matches && scope.matches(selector)) return scope;
-        if (scope.closest) {
-          var parent = scope.closest(selector);
-          if (parent) return parent;
+      // Integração nativa com o Form Sender v4.
+      // O Smart Plant grava o contexto diretamente no formulário que efetivamente
+      // será submetido pelo Form Sender v4. Assim a planta escolhida chega no e-mail
+      // mesmo quando o campo visual de mensagem estiver oculto.
+      function locateFormSenderV4() {
+        var scope = detail.targetAnchor ? document.getElementById(detail.targetAnchor) : null;
+        var mount = null;
+        if (scope) {
+          if (scope.matches && scope.matches('.formsenderV4_mount')) mount = scope;
+          if (!mount && scope.querySelector) mount = scope.querySelector('.formsenderV4_mount');
+          if (!mount && scope.matches && scope.matches('[data-plugin="form-sender-v4"]')) mount = scope.querySelector('.formsenderV4_mount');
         }
-        return scope.querySelector ? scope.querySelector(selector) : null;
+        if (!mount) mount = document.querySelector('[data-plugin="form-sender-v4"] .formsenderV4_mount');
+        if (!mount) mount = document.querySelector('.formsenderV4_mount');
+        return mount;
       }
-      function findMount(section) {
-        return section && section.querySelector ? section.querySelector('.formsenderV4_mount') : null;
-      }
-      function popupEligible(section) {
-        if (!section) return null;
-        var mount = section.querySelector('[data-fsp-mount]');
-        if (!mount) return null;
-        return /^(?:true|1|on)$/i.test(mount.dataset.smartPlantIntegration || '') ? mount : null;
-      }
-      function showError(message) {
-        var status = modal.querySelector('[data-smart-plant-action-status]');
-        if (status) status.textContent = message;
-        else console.warn('[Smart Plant] ' + message);
-      }
+
       function writeFormSenderV4Context(mount) {
-        var form = mount && (mount.formsenderV4 && mount.formsenderV4.form || mount.querySelector('form'));
+        if (!mount) return false;
+        var form = mount.querySelector('form');
         if (!form) return false;
+
         function setHidden(name, value) {
           var field = form.querySelector('[name="' + name + '"]');
           if (!field) {
@@ -967,6 +940,7 @@
           }
           field.value = String(value || '');
         }
+
         setHidden('origem', 'Smart Plant');
         setHidden('smartPlantId', detail.plantId);
         setHidden('smartPlantCode', detail.plantCode);
@@ -980,10 +954,11 @@
           msg.name = 'msg';
           form.appendChild(msg);
         }
-        // Troca a seleção anterior em vez de acumular múltiplas plantas.
+
         var current = String(msg.value || '').trim();
         var previous = String(form.dataset.smartPlantMessage || '');
         if (previous && current.indexOf(previous) >= 0) current = current.replace(previous, '').trim();
+
         var lines = [
           detail.plantTitle ? 'Planta: ' + detail.plantTitle : '',
           detail.area ? 'Metragem: ' + detail.area : '',
@@ -991,168 +966,36 @@
         ].filter(Boolean);
         if (detail.message) lines.push('', detail.message);
         var block = lines.join('\n').trim();
+
         form.dataset.smartPlantMessage = block;
         msg.value = [current, block].filter(Boolean).join('\n\n');
         mount.dataset.smartPlantSelected = detail.plantId || detail.plantTitle || 'true';
         return true;
       }
 
-      // Resolve o DESTINO pelo componente vinculado à âncora. O Form Sender V4,
-      // o Agendamento Sender e o Popup são independentes, mas usam o mesmo CTA.
-      // O modo automático preserva projetos antigos configurados somente com
-      // actionMode=form e formAnchor=contato.
-      var anchorElement = targetScope();
-      var requestedType = String(root.dataset.formDestination || 'auto').toLowerCase();
-      var knownTypes = ['form-sender-v4','agendamento-sender','form-sender-popup'];
-      if (knownTypes.indexOf(requestedType) === -1) requestedType = 'auto';
-      var matched = {
-        'form-sender-v4':pluginFor(anchorElement, 'form-sender-v4'),
-        'agendamento-sender':pluginFor(anchorElement, 'agendamento-sender'),
-        'form-sender-popup':pluginFor(anchorElement, 'form-sender-popup')
-      };
-      function mountFor(type, section) {
-        if (!section) return null;
-        if (type === 'form-sender-v4') return section.querySelector('.formsenderV4_mount');
-        if (type === 'agendamento-sender') return section.querySelector('[data-ags-mount]');
-        if (type === 'form-sender-popup') return popupEligible(section);
-        return null;
+      var formSenderMount = locateFormSenderV4();
+      var applied = writeFormSenderV4Context(formSenderMount);
+
+      // Form Sender Popup recebe sempre o contexto, mesmo quando o Form Sender V4 ja foi preenchido.
+      window.dispatchEvent(new CustomEvent('imobify:smart-plant-popup', { detail:detail }));
+
+      // Mantém o evento oficial para o adapter do Form Sender v4 e futuras integrações.
+      // Só o dispara quando não foi possível aplicar diretamente, evitando duplicidade.
+      if (!applied) {
+        window.dispatchEvent(new CustomEvent('imobify:smart-plant-form', { detail:detail }));
       }
-      function firstAvailable(type) {
-        var sections = document.querySelectorAll('[data-plugin="' + type + '"]');
-        for (var i = 0; i < sections.length; i++) {
-          var mount = mountFor(type, sections[i]);
-          if (mount) return {type:type, section:sections[i], mount:mount};
-        }
-        return null;
+
+      closeModal();
+      var target = document.querySelector('[data-plugin="form-sender-popup"]') ? null : (formSenderMount || (detail.targetAnchor ? document.getElementById(detail.targetAnchor) : document.querySelector('[data-plugin="form-sender-v4"]')));
+      if (target) {
+        target.scrollIntoView({ behavior:'smooth', block:'center' });
+        setTimeout(function () {
+          var focusTarget = target.querySelector ? target.querySelector('input,textarea,button') : null;
+          if (focusTarget && focusTarget.focus) focusTarget.focus({preventScroll:true});
+        }, 500);
+      } else {
+        console.warn('[Smart Plant] Form Sender v4 não encontrado. Configure a âncora do Form Sender ou adicione uma seção form-sender-v4 à página.');
       }
-      var chosen = null;
-      var matchedType = knownTypes.filter(function(type){return !!matched[type];})[0] || '';
-      if (matchedType && (requestedType === 'auto' || requestedType === matchedType)) {
-        var selectedMount = mountFor(matchedType, matched[matchedType]);
-        if (selectedMount) chosen = {type:matchedType, section:matched[matchedType], mount:selectedMount};
-      }
-      // Quando o usuário seleciona explicitamente um tipo, a escolha prevalece
-      // sobre uma âncora antiga (ex.: "contato" ainda apontando ao V4).
-      if (!chosen && requestedType !== 'auto') chosen = firstAvailable(requestedType);
-      if (!chosen && requestedType === 'auto') {
-        // Compatibilidade: com mais de um formulário, V4 é o padrão histórico;
-        // a âncora do Agendamento Sender prevalece sempre que configurada.
-        chosen = firstAvailable('form-sender-v4') || firstAvailable('agendamento-sender') || firstAvailable('form-sender-popup');
-      }
-      if (!chosen) {
-        showError('Formulário não encontrado. Adicione um Form Sender V4 ou Agendamento Sender e configure a âncora correspondente.');
-        return;
-      }
-      if (chosen.type === 'form-sender-v4' && !(chosen.mount.formsenderV4 && chosen.mount.formsenderV4.form || chosen.mount.querySelector('form'))) {
-        showError('Form Sender V4 ainda não foi inicializado. Verifique o carregamento do formulário.');
-        return;
-      }
-      if (chosen.type === 'agendamento-sender' && chosen.mount.dataset.agsReady !== 'true') {
-        showError('Agendamento Sender ainda não foi inicializado. Verifique o carregamento do plugin.');
-        return;
-      }
-      if (chosen.type === 'form-sender-popup') {
-        closeModal();
-        window.requestAnimationFrame(function(){
-          window.requestAnimationFrame(function(){
-            window.dispatchEvent(new CustomEvent('imobify:smart-plant-popup', {
-              detail:Object.assign({}, detail, {targetPopupMount:chosen.mount, explicitAction:true})
-            }));
-          });
-        });
-        return;
-      }
-      // 7.3.5 — Sequência sem rolagem concorrente:
-      // 1. Fecha o modal e libera o body, SEM retornar às plantas.
-      // 2. Atualiza o texto da planta no formulário de destino.
-      // 3. Navega à âncora após a liberação do body.
-      // A ancora e o formulario sao conceitos independentes: o plugin de
-      // formulario selecionado recebe o contexto, mas a navegacao deve ir
-      // SEMPRE ao ID configurado no Smart Plant (ex.: #contato). Na versao
-      // anterior, uma ancora pertencente a outro componente era ignorada.
-      var configuredAnchor = detail.targetAnchor || 'contato';
-      var destination = anchorElement || chosen.section;
-      function currentDestination() {
-        return document.getElementById(configuredAnchor) || (destination && destination.isConnected ? destination : chosen.section);
-      }
-      var selectedMount = chosen.mount;
-      // Na prévia de edição, desativa o auto-foco da seção selecionada
-      // enquanto o visitante segue para o formulário.
-      document.dispatchEvent(new CustomEvent('imobify:smart-plant-navigation', {
-        detail:{destination:chosen.type, targetAnchor:detail.targetAnchor}
-      }));
-      closeModal(true);
-      if (chosen.type === 'form-sender-v4') {
-        if (!writeFormSenderV4Context(chosen.mount)) {
-          console.warn('[Smart Plant] Form Sender V4 não aceitou o contexto da planta.');
-          return;
-        }
-        window.dispatchEvent(new CustomEvent('imobify:smart-plant-form', { detail:Object.assign({}, detail, {handled:true, destination:'form-sender-v4'}) }));
-      } else if (chosen.type === 'agendamento-sender') {
-        chosen.mount.dispatchEvent(new CustomEvent('imobify:smart-plant-select', {
-          bubbles:true,
-          detail:Object.assign({}, detail, {handled:true, destination:'agendamento-sender'})
-        }));
-      }
-      // Atualiza a URL sem acionar uma navegacao nativa concorrente, depois
-      // calcula a posicao real do ID configurado (nao do formulario ou de
-      // uma section arbitraria). O destino pode ser um span absoluto do Core.
-      function jumpToAnchor() {
-        var target = currentDestination();
-        if (!target || !target.isConnected) return false;
-        var doc = document.documentElement;
-        var old = doc.style.getPropertyValue('scroll-behavior');
-        var priority = doc.style.getPropertyPriority('scroll-behavior');
-        var oldBody = document.body.style.getPropertyValue('scroll-behavior');
-        var bodyPriority = document.body.style.getPropertyPriority('scroll-behavior');
-        doc.style.setProperty('scroll-behavior', 'auto', 'important');
-        document.body.style.setProperty('scroll-behavior', 'auto', 'important');
-        try {
-          var top = Math.max(0, Math.round(target.getBoundingClientRect().top + (window.scrollY || window.pageYOffset || 0)));
-          window.scrollTo({top:top, left:0, behavior:'instant'});
-        } catch (_) {
-          try { target.scrollIntoView({behavior:'auto',block:'start'}); } catch (_) {}
-        } finally {
-          if (old) doc.style.setProperty('scroll-behavior',old,priority);
-          else doc.style.removeProperty('scroll-behavior');
-          if (oldBody) document.body.style.setProperty('scroll-behavior',oldBody,bodyPriority);
-          else document.body.style.removeProperty('scroll-behavior');
-        }
-        return true;
-      }
-      // O #contato deve aparecer na URL, inclusive quando nao e descendente
-      // do Form Sender/Agendamento Sender selecionado.
-      if (anchorElement && configuredAnchor) {
-        try { window.history.replaceState(window.history.state, '', '#' + encodeURIComponent(configuredAnchor)); }
-        catch (_) { /* URLs locais/sandbox podem bloquear history.replaceState. */ }
-      }
-      // O modal ja foi fechado sem uma rolagem suave concorrente. A primeira
-      // rolagem ocorre no frame seguinte, seguida por verificacoes curtas
-      // para ajustes de layout apos remover position:fixed no body.
-      function focusRecipient() {
-        var input = selectedMount.querySelector('[name="nome"]') || selectedMount.querySelector('input:not([type="hidden"])');
-        if (input && input.focus) {
-          try { input.focus({preventScroll:true}); }
-          catch (_) { try { input.focus(); } catch (ignored) {} jumpToAnchor(); }
-        }
-      }
-      window.requestAnimationFrame(function () {
-        jumpToAnchor();
-        window.requestAnimationFrame(function () {
-          jumpToAnchor();
-          focusRecipient();
-          [90, 260, 500].forEach(function (delay) {
-            window.setTimeout(function () {
-              var target = currentDestination();
-              if (!target || !target.isConnected) return;
-              var top = target.getBoundingClientRect().top;
-              // Nunca voltar para as plantas por causa de um reflow do modal
-              // ou de uma transformacao/animacao de entrada da secao.
-              if (top < -65 || top > Math.min(140, window.innerHeight * .2)) jumpToAnchor();
-            }, delay);
-          });
-        });
-      });
     }
     root.addEventListener('click', function (event) {
       var open = event.target.closest('[data-smart-plant-open]');
@@ -1172,7 +1015,6 @@
         var actionControl = event.target.closest('[data-smart-plant-action]');
         if (actionControl) {
           event.preventDefault();
-          event.stopPropagation();
           sendAction();
         }
       });
